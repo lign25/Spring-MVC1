@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 bb8805b868387e0addb002e84fefcc6f0ccff945 lign25 <geonwoo.dev@gmail.com> 1673636743 +0900	commit (initial): first commit
+bb8805b868387e0addb002e84fefcc6f0ccff945 75c6bcaedd1b0272742a2db9c926eeca370440f7 lign25 <geonwoo.dev@gmail.com> 1673873312 +0900	commit: second commit
+75c6bcaedd1b0272742a2db9c926eeca370440f7 75c6bcaedd1b0272742a2db9c926eeca370440f7 lign25 <geonwoo.dev@gmail.com> 1673873392 +0900	checkout: moving from main to spring1
+75c6bcaedd1b0272742a2db9c926eeca370440f7 75c6bcaedd1b0272742a2db9c926eeca370440f7 lign25 <geonwoo.dev@gmail.com> 1673873573 +0900	checkout: moving from spring1 to main
+75c6bcaedd1b0272742a2db9c926eeca370440f7 75c6bcaedd1b0272742a2db9c926eeca370440f7 lign25 <geonwoo.dev@gmail.com> 1673874109 +0900	reset: moving to 75c6bca
+75c6bcaedd1b0272742a2db9c926eeca370440f7 75c6bcaedd1b0272742a2db9c926eeca370440f7 lign25 <geonwoo.dev@gmail.com> 1673874200 +0900	reset: moving to 75c6bca
+75c6bcaedd1b0272742a2db9c926eeca370440f7 bb8805b868387e0addb002e84fefcc6f0ccff945 lign25 <geonwoo.dev@gmail.com> 1673874211 +0900	reset: moving to bb8805b

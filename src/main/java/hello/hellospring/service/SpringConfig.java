@@ -1,35 +1,41 @@
 package hello.hellospring.service;
 
-import hello.hellospring.repository.JdbcMemberRepository;
-import hello.hellospring.repository.MemberRepository;
-import hello.hellospring.repository.MemoryMemberRepository;
-import hello.hellospring.service.MemberService;
+import hello.hellospring.aop.TimeTraceAop;
+import hello.hellospring.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import javax.sql.DataSource;
-import javax.xml.crypto.Data;
+import org.springframework.stereotype.Component;
 
 @Configuration
 public class SpringConfig {
 
     //application.properties 설정으로 인해 스프링부트가 자체적으로 빈을 생성
-    private DataSource dataSource;
+    private final MemberRepository memberRepository;
 
     @Autowired
-    public SpringConfig(DataSource dataSource) {
-        this.dataSource = dataSource;
+    public SpringConfig(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
     }
+
     @Bean
     public MemberService memberService() {
 
-        return new MemberService(memberRepository());
+        return new MemberService(memberRepository);
     }
 
-    @Bean
-    public MemberRepository memberRepository() {
+
+    //@Component 대신 빈에 등록하여 사용가능
+//    @Bean
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
+//    }
+
+//    @Bean
+//    public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
-    }
+//        return new JdbcMemberRepository(dataSource);
+//        return new JdbcTemplateMemberRepository(dataSource);
+//        return  new JpaMemberRepository(em);
+//    }
 }

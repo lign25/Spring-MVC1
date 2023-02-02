@@ -17,6 +17,7 @@ import hello.core.order.OrderServiceImpl;
 //앱 실제 동작에 필요한 구현객체를 생성, 객체의 생성과 연결을 AppConfig가 담당.
 //설계 변경으로 인해 DIP를 지키는 설계방식
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class AppConfig {
 
     public MemberService memberService() {
@@ -27,7 +28,12 @@ public class AppConfig {
     public OrderService orderService() {
         return new OrderServiceImpl(new MemoryMemberRepository(), new FixDiscountPolicy());
 =======
+=======
+<<<<<<< Updated upstream
+>>>>>>> spring2
 
+=======
+>>>>>>> Stashed changes
 public class AppConfig {
 
     //역할을 세우고 구현이 내부에 들어가는 구조
@@ -43,8 +49,6 @@ public class AppConfig {
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
-    //OCP,DIP 원칙을 지킴
-    //정액할인, 정률할인 변경시 DiscountPolicy만 수정하여 변경가능
     public DiscountPolicy discountPolicy() {
 //        return new FixDiscountPolicy();
         return new RateDiscountPolicy();

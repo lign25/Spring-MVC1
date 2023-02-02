@@ -21,11 +21,7 @@ public class OrderApp {
         Member member = new Member(memberId, "itemA", Grade.VIP);
         memberService.join(member);
 
-<<<<<<< HEAD
-        Order order = orderService.createOrder(memberId, "itemA", 10000);
-=======
         Order order = orderService.createOrder(memberId, "itemA", 20000);
->>>>>>> spring2
 
         System.out.println("order = " + order);
     }
